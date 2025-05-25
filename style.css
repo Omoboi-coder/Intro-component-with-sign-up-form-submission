@@ -1,0 +1,265 @@
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+body{
+    background-image: url(./images/bg-intro-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: hsl(0, 100%, 74%) ;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-height: 90vh;
+    gap: 60px; 
+}
+
+.heading{
+    margin-top: 90px;
+    max-width: 100%;
+    width: 450px;
+
+}
+
+h1{
+    font-size: 40px;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 40px;
+}
+
+.heading-text{
+    color: white;
+    font-size: 15px;
+    line-height: 1.5;
+
+}
+
+.form-container{
+    max-width: 100%;
+    width: 450px;
+    margin-top: 80px;
+    position: relative;
+
+}
+
+.try{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(248, 32%, 49%);
+    box-shadow: 0px 8px 0px hsla(249, 10%, 26%, 0.21);
+    color: white;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;  
+}
+
+span{
+    color:hsl(246, 25%, 77%);
+    font-weight: 600;
+    
+}
+
+#Signup-form{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 8px 0px hsl(0, 67%, 64%);
+    border-radius: 10px;
+    padding: 30px 25px 10px 25px;
+    max-height: 80vh;
+
+}
+
+.input-container{
+    position: relative;
+    
+}
+
+
+input::placeholder{
+    color: hsl(249, 10%, 26%);
+    opacity: 0.9;
+    font-size: 12px;
+    font-weight: 700; 
+}
+
+.red-placeholder::placeholder {
+    color: hsl(0, 100%, 74%); 
+    opacity: 1;
+}
+
+input{
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid hsl(246, 25%, 77%);
+    margin-bottom: 15px;
+    height: 50px;
+    width: 100%;    
+}
+input:focus{
+    outline: 1px solid grey;
+}
+
+.error-msg{
+    text-align: right;
+    font-style: italic;
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: -10px;
+    color: hsl(0, 100%, 64%);
+}
+
+.error-icon{
+    position: absolute;
+    right: 10px;
+    top: 20%;
+    transform: translate(-50%);
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    color: hsl(0, 100%, 74%);
+}
+
+button{
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: hsl(154, 59%, 51%);
+    box-shadow: 0px 5px 0px rgba(0, 128, 0, 0.607);
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 550;
+    border: none;
+    cursor: pointer;
+}
+
+.Terms{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 0.65rem;
+}
+
+a{
+    color: hsla(0, 100%, 50%, 0.5);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+.attribution { font-size: 11px; text-align: center; color: white; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+.success-page {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 8px 0px hsl(0, 67%, 64%);
+    max-height: 80vh;
+    width: 100%;
+}
+
+.success-page h2 {
+    color: hsl(154, 59%, 51%);
+    margin-bottom: 10px;
+}
+
+.success-page p {
+    color: hsl(249, 10%, 26%);
+    font-size: 14px;
+}
+
+.checkmark {
+    width: 56px;
+    height: 56px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.checkmark__circle {
+    stroke: hsl(154, 59%, 51%); 
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark__check {
+    stroke: hsl(154, 59%, 51%); 
+    stroke-miterlimit: 10;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+#Signup-form.hidden {
+    display: none !important;
+}
+
+.try.hidden {
+    display: none !important;
+}
+
+@media (max-width: 768px) {
+    body{
+        background-image: url(./images/bg-intro-mobile.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: hsl(0, 80%, 74%) ;
+        max-height: 50%;
+    }
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        gap: 20px;
+    }
+    .heading{
+        width: 100%;
+    }
+    .form-container{
+        width: 100%;
+        margin: 0;
+        position: relative;
+
+    }
+
+     .heading{
+        margin-top: 5px;  
+    }
+    
+    .try{
+    font-size: 15px;
+    font-weight: 700;
+    height: 40px;  
+    }
+
+}
+
+
+
